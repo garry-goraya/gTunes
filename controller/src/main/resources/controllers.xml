@@ -15,7 +15,7 @@
 		</property>
 	</bean>
 
-	<bean id="dashboardController" class="com.gtunes.DashboardController" >
+	<bean id="dashboardController" class="com.DashboardController" >
 		<property name="utilService" ref="utilService"></property>
 	</bean>
 

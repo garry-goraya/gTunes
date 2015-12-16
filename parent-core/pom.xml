@@ -14,7 +14,9 @@
         <module>../dao</module>
         <module>../service</module>
         <module>../web-app</module>
+        <module>../routing</module>
     </modules>
+
     <properties>
         <java.version>1.7</java.version>
         <tomcat.version>7.0.59</tomcat.version>

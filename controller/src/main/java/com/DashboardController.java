@@ -1,4 +1,4 @@
-package com.gtunes;
+package com;
 
 import com.service.utilities.UtilService;
 import org.springframework.beans.factory.annotation.Autowired;
