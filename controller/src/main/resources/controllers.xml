@@ -21,16 +21,13 @@
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/jsp/" />
+		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 
 
-	<!--<context:component-scan base-package="com.gtunes.*"/>-->
 
-	<!--<bean name="dashboardController" class="com.gtunes.DashboardController">
-		<property name="utilService" ref="utilService">
-		</property>
-	</bean>-->
+
+
 
 </beans>

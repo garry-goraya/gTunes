@@ -5,7 +5,7 @@
   <artifactId>web-app</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>web-app Maven Webapp</name>
+  <name>web-app</name>
 
   <parent>
     <groupId>com.gtunes.parent</groupId>
@@ -21,10 +21,31 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.gtunes.controller</groupId>
+      <artifactId>controller</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
-    <finalName>web-app</finalName>
+    <finalName>gTunes</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <!-- http port -->
+            <port>8282</port>
+            <!-- application path always starts with /-->
+            <path>/gTunes</path>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
 </project>
