@@ -1,4 +1,4 @@
-FIEF Projects
+sample application Projects
 =======
 This contains all library projects and web applications
 for Flint Integration and Extensibility
@@ -7,24 +7,13 @@ Module Structure
 ========
 Libraries:
 -------------
-* fief-ad
-* fief-camel-fca
-* fief-camel-jde
-* fief-extension-fca
-* fief-extension-jde
-* fief-jde-svcs-bus
-* fief-jde-svcs-db
-* fief-insight
-* fief-qv21
-* fief-resources
-* fief-specs
-* fief-test-resources
+
 
 Web Applications:
 -------------
 * fief-camel-fca-web
 * fief-camel-jde-web
-* fief-spring-batch
+
 
 Build Commands
 ========
