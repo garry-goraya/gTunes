@@ -40,7 +40,6 @@
           <configuration>
             <!-- http port -->
             <port>8282</port>
-            <!-- application path always starts with /-->
             <path>/gTunes</path>
           </configuration>
         </plugin>

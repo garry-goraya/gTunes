@@ -7,7 +7,7 @@
   <name>gtunes</name>
   <packaging>pom</packaging>
 
-
+<!--Place all developers  name and repository information bla bla-->
     <modules>
         <module>parent-core</module>
     </modules>
