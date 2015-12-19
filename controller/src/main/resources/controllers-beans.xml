@@ -5,29 +5,6 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<import resource="service-beans.xml"></import>
-
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/index.htm">dashboardController</prop>
-			</props>
-		</property>
-	</bean>
-
-	<bean id="dashboardController" class="com.DashboardController" >
-		<property name="utilService" ref="utilService"></property>
-	</bean>
-
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-
-
-
-
-
-
+	<context:component-scan
+			base-package="com.controller.*"/>
 </beans>

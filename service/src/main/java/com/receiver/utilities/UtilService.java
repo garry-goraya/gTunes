@@ -1,4 +1,4 @@
-package com.service.utilities;
+package com.receiver.utilities;
 
 /**
  * Created by guramritpal on 12/15/15.

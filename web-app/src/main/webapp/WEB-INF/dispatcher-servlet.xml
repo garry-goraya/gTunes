@@ -2,9 +2,48 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<!--<context:component-scan base-package="com.gtunes.*"/>-->
+	<!--
+       - The ContentNegotiatingViewResolver delegates to the InternalResourceViewResolver and BeanNameViewResolver,
+       - and uses the requested media type (determined by the path extension) to pick a matching view.
+       - When the media type is 'text/html', it will delegate to the InternalResourceViewResolver's JstlView,
+       - otherwise to the BeanNameViewResolver.
+       -->
 
+	<!--<mvc:view-resolvers>
+		<mvc:content-negotiation use-not-acceptable="true">
+			<mvc:default-views>
+				<bean class="org.springframework.web.servlet.view.JstlView">
+					<property name="url" value="" />
+				</bean>
+			</mvc:default-views>
+		</mvc:content-negotiation>
+
+		&lt;!&ndash; Registering BeanNameViewResolver and InternalViewResolver &ndash;&gt;
+		<mvc:bean-name />
+		<mvc:jsp prefix="/WEB-INF/view/" suffix=".jsp"/>
+	</mvc:view-resolvers>-->
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+
+	<mvc:view-controller path="/" view-name="welcome" />
+
+	<mvc:default-servlet-handler />
+
+
+	<!--
+        - Message source for this context, loaded from localized "messages_xx" files.
+        - Files are stored inside src/main/resources
+    -->
+	<!--<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+		  p:basename="messages/messages"/>-->
 </beans>
